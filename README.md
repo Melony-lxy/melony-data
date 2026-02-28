@@ -2,6 +2,8 @@
 
 提供了格式化时间、HTMLEscape 相关功能的工具函数库。
 
+**仓库地址：** [https://github.com/Melony-lxy/ypp_pc](https://github.com/Melony-lxy/ypp_pc)
+
 ## 功能特性
 
 - ✨ **日期格式化** - 灵活的日期格式化函数

@@ -1,6 +1,6 @@
 {
   "name": "melony-data",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "提供了格式化时间，HTMLEScape相关功能的工具函数",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,9 @@
   ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Melony-lxy/ypp_pc"
+  }
 }
