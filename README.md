@@ -6,7 +6,8 @@
 
 - ✨ **日期格式化** - 灵活的日期格式化函数
 - 🛡️ **HTML转义** - 安全的HTML转义和反转义
-- 📦 **轻量化** - 无额外依赖，开箱即用
+- � **数字转中文** - 支持大写金额字或普通小写格式
+- �📦 **轻量化** - 无额外依赖，开箱即用
 - 🔧 **易于集成** - 一键导入所有工具函数
 
 ## 安装
@@ -18,7 +19,7 @@ npm install melony-data
 ## 快速开始
 
 ```javascript
-const { dateFormat, htmlEscape, htmlUnescape } = require('melony-data');
+const { dateFormat, htmlEscape, htmlUnescape, numberToChinese } = require('melony-data');
 ```
 
 ## API 文档
@@ -135,6 +136,10 @@ console.log(unescaped);
 
 - `dateFormat()` - 仅接受 `Date` 对象，其他类型会返回空字符串并输出警告
 - `htmlEscape()` 和 `htmlUnescape()` - 仅接受字符串类型，其他类型会原样返回并输出警告
+- `numberToChinese()`
+  - 第一个参数支持数字或可解析的数字字符串
+  - 第二个参数 `type` 默认 `true` 表示大写金额用字，设置为 `false` 则返回普通小写中文格式
+  - 输入不合法（如非数字字符串）时会打印警告并返回原值
 
 ## 许可证
 
@@ -142,4 +147,14 @@ ISC
 
 ## 版本
 
-1.0.0
+1.1.0
+
+## 数字转中文示例
+
+```javascript
+const { numberToChinese } = require('melony-data');
+
+console.log(numberToChinese(128930));          // 壹拾贰万捌仟玖佰叁拾  (默认大写)
+console.log(numberToChinese(128930, false));   // 十二万八千九百三十  (小写)
+console.log(numberToChinese(-12.34, false));   // 负十二点三四
+```
